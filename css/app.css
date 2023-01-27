@@ -27,11 +27,11 @@ body{
   line-height: 2;
 }
 /**Globales **/
-/* .contenedor{
+.contenedor{
   max-width: 120rem;
   width: 90%;
   margin: 0 auto;
-} */
+}
 h1,h2,h3{
   font-weight: 900;
   font-family: var(--fuenteSecundaria);
@@ -63,7 +63,7 @@ button{
   font-family: var(--fuentePrincipal);
   font-weight: 700;
   border: none;
-  padding: 2rem;
+  padding: 1.5rem;
   margin: 0 auto;
   border-radius: 5%;
   color: var(--blanco);
@@ -74,7 +74,6 @@ button{
 button:hover{
   background-color:var(--primario);
   color: #1F1E1E;
-
 }
 /**header**/
 .header{
@@ -85,7 +84,9 @@ button:hover{
   flex-direction: column;
   align-items: center;
   background-color: #F37335;
+  
 }
+
 @media (min-width: 768px) { 
   .header{
   flex-direction: row;
@@ -99,21 +100,32 @@ button:hover{
   height: 9rem;
   object-fit: cover;
 }
-.enlaces{
-display: flex;
-justify-content: space-between;
-gap: 2rem;
-font-family: var(--fuentePrincipal);
-font-weight: 400;
+.enlaces ul{
+  list-style: none;
 }
 @media (min-width: 768px) { 
-  .enlaces{
-  gap: 5rem;
+  .enlaces ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    position: relative;
+    flex-direction: row;
+    background-color: var(--secundario);
+    list-style: none;
+    
   }
 }
 .enlaces a{
   color: var(--blanco);
+  font-size: 1.5rem;
+  padding-bottom: 5rem;
+}
+@media (min-width: 768px) { 
+  .enlaces a{
+  font-size: 1.8rem;
   
+  }
 }
 .enlaces a:hover{
   color: rgb(12, 1, 1);
@@ -123,8 +135,22 @@ font-weight: 400;
   position: fixed;
   transform:  scale(0.9);
   transition: all 0.6s;
-  height: 14rem;
+  height: 10rem;
   z-index: 200; 
+}
+.roll ul{
+  display: none;
+}
+@media (min-width: 768px) {
+  .roll ul{
+    display: flex;
+  } 
+  
+}
+.roll img{
+  width: 18rem;
+  transform:  scale(0.9);
+  transition: all 0.6s;
 }
 @media (min-width: 768px) { 
   .roll{
@@ -154,35 +180,6 @@ font-weight: 400;
   
   
 }
-/* .contenido-slider:nth-child(1),.contenido-slider:nth-child(5){
-  background-image: url(/img/hero1.jpg);
-  background-repeat: no-repeat;
-  background-size: 110rem;
-  max-width: 100%;
-  background-position: left center;
-  color: #fff;
-}
-.contenido-slider:nth-child(2){
-  background-image: url(/img/hero2.jpg);
-  background-repeat: no-repeat;
-  background-size: 100rem;
-  background-position: top center;
-  color: #fff;
-}
-.contenido-slider:nth-child(3){
-  background-image: url(/img/hero3.jpg);
-  background-repeat: no-repeat;
-  background-size: 100rem;
-  background-position: top center;
-  color: #fff;
-}
-.contenido-slider:nth-child(4){
-  background-image: url(/img/hero4.jpg);
-  background-repeat: no-repeat;
-  background-size: 100rem;
-  background-position: top center;
-  color: #fff;
-} */
 
 
 .contenido-slider>img{
@@ -193,10 +190,6 @@ object-fit: contain;
 
 }
 
-
-/* .contenido-slider > div{
-  width: 40%;
-} */
 
 
 
@@ -295,7 +288,7 @@ object-fit: contain;
   width: 50rem;
 }
 .valores img{
-  padding-left: 5rem;
+  padding-left: 2rem;
 }
 @media (min-width: 768px) { 
   .valores img:nth-child(2),.valores img:nth-child(3){
@@ -305,7 +298,7 @@ object-fit: contain;
 
 /**matriculate**/
 .matriculate{
-  margin: 10rem 5rem ;
+  margin: 2rem 1rem 10rem 1rem;
   column-gap:10rem;
 }
 @media (min-width: 768px) { 
@@ -360,6 +353,9 @@ object-fit: contain;
   display: grid;
   grid-template-rows: repeat(2,1fr);
 }
+.profesionales-grid h3{
+  color: var(--blanco);
+}
 @media (min-width: 768px) { 
   .profesionales-grid{
     grid-template-columns: repeat(2,1fr) ;
@@ -388,10 +384,18 @@ object-fit: contain;
 @media (min-width: 768px) { 
   .footer{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr) 0.5fr 0.5fr;
     
     text-align: start;
   }
+}
+.redes-sociales a{
+  color: #e1e1e1;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+.redes-sociales p{
+  
 }
 
 
@@ -419,7 +423,6 @@ object-fit: contain;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 .nuestros-cursos h3{
   color: var(--blanco);
@@ -497,4 +500,111 @@ object-fit: contain;
 .otros-cursos img{
   max-width: 100%;
   width: 45rem;
+}
+/**Nosotros**/
+/** mision**/
+.nosotros-mision{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rem 0;
+  gap: 2rem;
+  border-bottom: solid 6px var(--secundario);
+}
+@media (min-width: 768px) { 
+  .nosotros-mision{
+    display: flex;
+    flex-direction: row;
+    margin: 0 10rem;
+  }
+
+}
+.nosotros-texto{
+margin: auto 0;
+padding: 0 4rem;
+
+}
+@media (min-width: 768px) { 
+  .nosotros-texto{
+    padding: 0 7rem;
+  }
+}
+.nosotros-mision img{
+  width: 70%;
+  border-radius: 5rem;
+  object-fit: cover;
+  object-position: left 20% top 25%;
+}
+@media (min-width: 768px) { 
+  .nosotros-mision img{
+    width: 50%;
+  }
+}
+@media (min-width: 768px) { 
+  .nosotros-mision img{
+    width: 40%;
+  }
+  
+}
+.css-g03djc{
+  background-color: #F37335;
+}
+
+/**galeria**/
+/**imagenes**/
+.galeria{
+  list-style: none;
+  padding: 5rem 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2rem;
+}
+@media (min-width: 768px) { 
+  .galeria{
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+.galeria img{
+  max-width: 100%;
+  height: 30rem;
+  width: 30rem;
+  object-fit: cover;
+  border-radius: 5rem;
+}
+
+.galeria-texto{
+  background: linear-gradient(0deg, var(--primario), rgba(0, 0, 0, 0.24)),
+  url("../img/galeria.JPG") no-repeat center center/cover;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/**contactanos**/
+/**contactos**/
+.contactanos{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5rem;
+  
+}
+@media (min-width: 768px) { 
+  .contactanos{
+  grid-template-columns: repeat(2,1fr);
+  }
+  .mapa {
+    width: 2rem;
+    padding-left: 2rem;
+  }
+}
+.contacto img{
+  max-width: 100%;
+  width: 50rem;
+}
+@media (min-width: 768px) { 
+  .contacto img{
+    
+    width: 60rem;
+  }
 }
