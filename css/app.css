@@ -385,19 +385,17 @@ object-fit: contain;
   .footer{
     display: grid;
     grid-template-columns: repeat(2,1fr) 0.5fr 0.5fr;
-    
     text-align: start;
   }
+}
+.footer p{
+color: #e1e1e1;
 }
 .redes-sociales a{
   color: #e1e1e1;
   font-size: 2rem;
   margin: 0 auto;
 }
-.redes-sociales p{
-  
-}
-
 
 .footer img{
   width: 30rem;
@@ -586,17 +584,19 @@ padding: 0 4rem;
 .contactanos{
   display: grid;
   grid-template-columns: 1fr;
-  gap: 5rem;
+  gap: 2rem;
   
+}
+.contactanos h3{
+  text-align: justify;
 }
 @media (min-width: 768px) { 
   .contactanos{
   grid-template-columns: repeat(2,1fr);
+
   }
-  .mapa {
-    width: 2rem;
-    padding-left: 2rem;
-  }
+
+
 }
 .contacto img{
   max-width: 100%;
