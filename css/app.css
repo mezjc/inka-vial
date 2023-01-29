@@ -388,8 +388,9 @@ object-fit: contain;
     text-align: start;
   }
 }
-.footer p{
-color: #e1e1e1;
+
+.footer>div a{
+  color: #e1e1e1;
 }
 .redes-sociales a{
   color: #e1e1e1;
