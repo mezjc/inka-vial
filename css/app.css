@@ -211,7 +211,7 @@ object-fit: contain;
 @media (min-width: 768px) { 
   .todos-curosos{
     display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(40rem,1fr));
+  grid-template-columns: repeat(3, 1fr);
   }
 } 
 .servicios h2, h3{
@@ -332,7 +332,7 @@ object-fit: contain;
   
 /**profesionales**/
 .profesionales{
-  background-image: linear-gradient(to bottom,transparent 50%,var(--secundario) 50% ),url(../img/grupo-inkavial.JPG);
+  background-image: linear-gradient(to bottom,transparent 50%,var(--secundario) 50% ),url(../img/grupo-inkavial.jpg);
   background-position: center,top ;
   background-repeat:no-repeat;
   background-size: 100%, 100%;
@@ -342,7 +342,7 @@ object-fit: contain;
 }
 @media (min-width: 768px) { 
   .profesionales{
-    background-image: linear-gradient(to right,transparent 50%,var(--secundario) 50% ),url(../img/grupo-inkavial.JPG);
+    background-image: linear-gradient(to right,transparent 50%,var(--secundario) 50% ),url(../img/grupo-inkavial.webp);
     background-position: left ,left;
     padding: 10rem 0;
     background-size: 100%, 50%;
